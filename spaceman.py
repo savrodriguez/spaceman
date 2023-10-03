@@ -74,9 +74,19 @@ def spaceman(secret_word):
         
         if get_guessed_word == secret_word:
             print("Congrats! You Won. The Secret Word was: ", secret_word)
+            return True
 
         if attempts_left == 0:
             print("You lose! The Secret Word was: ", secret_word)
+        
+    while attempts_left == 0:
+        response = input("Would you like to play again? YES / NO: ")
+
+        if response.lower() == 'yes':
+            return spaceman(secret_word)
+        else:
+            print("Thank you for playing Spaceman!")
+            break
 
 #caller function
 secret_word = load_word()
