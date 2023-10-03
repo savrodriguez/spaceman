@@ -20,7 +20,7 @@ def get_guessed_word(secret_word, letters_guessed):
             display += "_"
     return display
 
-# receiving user input
+## receiving user input
 def is_guess_in_word(guess, secret_word):
     guess = input("Guess A Letter: ")
     for guess in secret_word:
@@ -29,7 +29,7 @@ def is_guess_in_word(guess, secret_word):
         else:
             return False
 
-# testing if secret word has been guessed correctly
+## testing if secret word has been guessed correctly
 def is_word_guessed(secret_word, letters_guessed):
     for letters_guessed in secret_word:
         if letters_guessed == secret_word:
@@ -39,7 +39,7 @@ def is_word_guessed(secret_word, letters_guessed):
             print("Incorrect, Try Again")
             return False
 
-# structure of game
+## structure of game
 def spaceman(secret_word):
     get_guessed_word = "_" * len(secret_word)
     attempts_left = 7
@@ -88,6 +88,6 @@ def spaceman(secret_word):
             print("Thank you for playing Spaceman!")
             break
 
-#caller function
+## caller function
 secret_word = load_word()
 spaceman(secret_word)
