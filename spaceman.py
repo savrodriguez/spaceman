@@ -46,7 +46,7 @@ def spaceman(secret_word):
     letter_guessed = [ ]
 
     print("Welcome to the Spaceman Game!")
-    print("You have 10 attempts to guess my Secret Word. Good Luck!")
+    print("You have 7 attempts to guess my Secret Word. Good Luck!")
 
     while attempts_left > 0:
         print("\nSecret Word:", get_guessed_word)
